@@ -5,13 +5,14 @@
 
 body {
   font-family: "Merriweather", serif;
-  background-color: #f9fafc;
+  background-color: #ebf2ff;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
 }
 
 .navbar__brand {
@@ -22,39 +23,247 @@ body {
   width: 100%;
 }
 
-.nav__item {
+.button__primary {
   background-image: linear-gradient(
     to right,
     #ff512f 0%,
     #dd2476 51%,
     #ff512f 100%
   );
-  color: white;
+  color: #fff;
   border: none;
   padding: 12px;
   border-radius: 6px;
   font-weight: 600;
 }
 
-.nav__item:hover {
+.button__primary :hover {
   border: 2px solid #ff6767;
   cursor: pointer;
 }
 
-@media (min-width: 768) {
+.container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.hero__image__container {
+  width: 100%;
+}
+
+.hero__image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+}
+
+.hero__text {
+  font-weight: 800;
+  font-size: 30px;
+  margin: 20px 0;
+  color: #1d3557;
+}
+
+.food__card__description {
+  padding: 15px;
+}
+
+.food__card {
+  background-color: #f9f9f9;
+}
+
+.food__card__image__container {
+  width: 100%;
+}
+
+.food__image {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+.explore__menu__text {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1d3557;
+}
+
+.email__subscribe__container {
+  margin-top: 3rem;
+  width: 100%;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.email__container__text {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
+  color: #1d3557;
+}
+
+.email__container__input__text {
+  display: flex;
+  align-items: center;
+}
+
+.email__input {
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #ee89a0;
+  background-color: #fcedf0;
+  font-weight: 700;
+  color: #1d3557;
+}
+
+.quote__container {
+  position: relative;
+  margin: 4rem 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  border-radius: 13px;
+  background: url(https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80)
+    center center / cover no-repeat;
+}
+
+.quote__image__overlay {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  border-radius: 13px;
+  background-color: #0a4065;
+  opacity: 49%;
+}
+
+.quote__image__text {
+  color: #fff;
+  z-index: 3;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+}
+
+footer > img {
+  width: 300px;
+  filter: brightness(0) invert(1);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer > ul {
+  margin-top: -8px;
+  color: white;
+}
+
+footer > ul > li {
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+  .explore__menu__lists {
+    margin-top: 45px;
+    display: flex;
+    gap: 15px;
+    padding: 0 30px;
+  }
+
+  .explore__menu__container {
+    position: relative;
+  }
+
+  .explore__menu__gradient__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    z-index: -3;
+    transform: skewY(-5deg);
+  }
+
+  #pizza__card {
+    margin-top: -20px;
+    margin-bottom: 30px;
+  }
+
   .navbar {
     justify-content: space-between;
     padding: 10px 30px;
   }
-}
 
-@media (min-width: 1024) {
-  .navbar__brand {
-    width: 100px;
+  .hero__container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
   }
 
-  .nav__item {
+  footer {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 70%;
+  }
+
+  .explore__menu__lists {
+    gap: 25px;
+  }
+
+  .navbar__brand {
+    width: 150px;
+  }
+
+  .button__primary {
     padding: 20px;
     font-size: 20px;
+  }
+
+  .hero__description {
+    width: 100%;
+  }
+
+  .hero__text {
+    font-size: 50px;
+  }
+
+  .explore__menu__text {
+    font-size: 48px;
   }
 }
